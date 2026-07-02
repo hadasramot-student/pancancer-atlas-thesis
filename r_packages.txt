@@ -1,0 +1,51 @@
+# r_packages.txt
+#
+# R packages used across this pipeline (CRAN/Bioconductor unless noted).
+# This is a plain package list, NOT a resolved lockfile — exact versions
+# depend on the Rstudio apptainer image this was developed against, which
+# isn't reproducible from outside the cluster. Run dump_session_info.R
+# inside your R environment to capture the versions you actually use, and
+# consider running `renv::init(); renv::snapshot()` there to generate a
+# real renv.lock for this repo.
+#
+# Bioconductor:
+AnnotationDbi
+batchelor
+celldex
+fgsea
+org.Hs.eg.db
+SingleCellExperiment
+SingleR
+sva
+SummarizedExperiment
+zellkonverter
+# CRAN:
+anndata
+caret
+dplyr
+fastmap
+future
+ggplot2
+harmony
+HGNChelper
+jsonlite
+logger
+Matrix
+msigdbr
+openxlsx
+optparse
+patchwork
+pheatmap
+purrr
+RCurl
+readr
+readxl
+Seurat
+SeuratObject
+tidyr
+tidyverse
+# GitHub-only:
+carmonalab/GeneNMF
+satijalab/seurat-wrappers        # SeuratWrappers (fastMNN wrapper)
+immunogenomics/lisi
+theislab/kBET

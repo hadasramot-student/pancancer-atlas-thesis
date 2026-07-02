@@ -1,0 +1,17 @@
+# requirements-scimilarity.txt
+#
+# Separate environment for Ch.2 Scimilarity annotation
+# (ch2_annotation/my_scimilarity.py, ch4_subclustering/run_scimilarity.py).
+# Kept isolated from the main environment because scimilarity pins its own
+# scanpy/anndata/torch versions that can conflict with scvi-tools.
+#
+#   conda create -n scimilarity python=3.10
+#   conda activate scimilarity
+#   pip install -r requirements-scimilarity.txt
+#
+# Also requires a downloaded Scimilarity model checkpoint — set
+# SCIMILARITY_MODEL_PATH to its directory.
+
+scimilarity
+scanpy
+anndata

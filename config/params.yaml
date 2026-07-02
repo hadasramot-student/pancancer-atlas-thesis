@@ -1,0 +1,80 @@
+# params.yaml
+#
+# Shared parameters for the pan-cancer atlas pipeline. Mirrors the defaults
+# actually used in the thesis analysis (see each script's header for the
+# specific CLI flag). Not auto-loaded by every script — most steps expose
+# these as CLI args with matching defaults; this file is the single
+# reference point for what those defaults were.
+
+# ── Ch.1: Aggregation & QC ──────────────────────────────────────────────
+qc:
+  min_cells: 3          # Seurat::CreateSeuratObject(min.cells=)
+  min_features: 200     # Seurat::CreateSeuratObject(min.features=), i.e. nFeature_RNA >= 200
+  scale_factor: 10000    # NormalizeData(scale.factor=)
+  n_var_genes: 10000     # FindVariableFeatures(nfeatures=) at object-creation time
+  n_pc: 20                # RunPCA npcs at object-creation time
+  cluster_resolutions: [0.1, 0.25, 0.5, 0.75, 1, 2]   # exploratory clustering at ingestion
+
+cancer_types_file: cancer_types.txt   # the 13 cancer types in this atlas
+
+# ── Ch.3: Batch correction ──────────────────────────────────────────────
+batch_correction:
+  batch_col: project_name
+  n_hvg: 2000
+  n_pcs: 30
+  cluster_resolution:
+    cca: 0.8
+    mnn: 0.8
+    combat: 0.8
+    harmony: 0.6
+  scanvi:
+    n_latent: 30
+    max_epochs_scvi: 200
+    max_epochs_scanvi: 100
+    unlabeled_category: Unknown
+
+# ── Ch.4: Subclustering ──────────────────────────────────────────────────
+subclustering:
+  lineages_file: lineages.txt   # the 8 lineage compartments
+  n_pcs: 30
+  umap_min_dist: 0.3
+  cluster_resolutions: [0.25, 0.5, 0.75, 1.0, 2.0]   # 5 resolutions, Louvain/Leiden
+  markers:
+    test: wilcox
+    logfc_threshold: 0.25
+    min_pct: 0.1
+    padj: 0.05
+    top_n: 10
+  hallmark_gsea:
+    min_size: 10
+    max_size: 500
+    n_perm_simple: 10000
+
+# ── Ch.5: GEP programs ────────────────────────────────────────────────────
+gep:
+  tumor_compartment: Epithelial   # for all cancers except Brain (see filter_brain_malignant.R)
+  cnmf:
+    k_sweep: [10, 15, 20, 25, 30, 35, 40]
+    k_final: 20
+    n_hvg: 2000
+    n_iter: 200
+    n_runs_per_k: 200
+    density_threshold: 0.1
+    seed: 42
+  genenmf:
+    n_mp: 20            # matches cNMF K
+    k_range: "4:9"        # per-sample NMF k sweep
+    nfeatures: 2000
+    top_n: 50
+    jaccard_thr: 0.1
+    min_cells: 50
+    min_samples: 5
+  spectra:
+    cell_type_key: scimilarity_celltype
+    immune_lineages: [T-cells, Myeloid, B-cell, NK-cells, Hematopoietic_Stem_and_Progenitor_cells]
+    subsample_per_file_cap: 60000     # T-cells / Myeloid only
+    subsample_merged_cap: 200000      # T-cells / Myeloid only
+  ids:
+    num_terms: 6
+    bandwidth_term: 0.5
+    scale_range: [0, 8]

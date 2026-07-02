@@ -1,0 +1,38 @@
+# environment.yml
+#
+# Primary Python environment ("scanvi-env" on the original cluster) for:
+# batch correction (scANVI/scvi-tools), cNMF, GeneNMF comparison scripts,
+# IDS, and Spectra. GPU (CUDA) required for scANVI training and Spectra.
+#
+# Create with:
+#   conda env create -f environment.yml
+#   conda activate pancancer-atlas
+name: pancancer-atlas
+channels:
+  - conda-forge
+  - bioconda
+  - pytorch
+  - nvidia
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+  - pytorch
+  - pytorch-cuda=11.8
+  - pip:
+      - scanpy>=1.11
+      - anndata
+      - scvi-tools>=1.3
+      - cnmf
+      - scSpectra
+      - # IDS (InterDependence Score): github.com/aradha/interdependence_scores
+      - # pip install --no-deps git+https://github.com/aradha/interdependence_scores.git
+
+# Scimilarity runs in its OWN environment (separate model/dependency stack) —
+# see requirements-scimilarity.txt. Install and activate it separately:
+#   pip install -r requirements-scimilarity.txt
+#   conda run -n scimilarity python ch2_annotation/my_scimilarity.py ...

@@ -1,0 +1,45 @@
+# Data products — never commit raw/intermediate data, only scripts/configs/small tables
+data/
+temp_objects/
+*.RDS
+*.rds
+*.h5ad
+*.h5Seurat
+*.mtx
+*.mtx.gz
+*.loom
+*.pickle
+*.pkl
+
+# Large / generated tables and figures (regenerate via the scripts)
+outputs/
+*.log
+logs/
+*.out
+*.err
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+renv/library/
+renv/staging/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Editor/OS
+.DS_Store
+*.swp
+
+# Credentials — should never exist in this repo, but block by default
+*.env
+.env.*
+*.pem
+*credentials*
+*token*

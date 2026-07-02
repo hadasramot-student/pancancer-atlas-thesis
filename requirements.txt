@@ -1,0 +1,21 @@
+# requirements.txt
+#
+# Pip-only equivalent of environment.yml (primary "scanvi-env"), for users
+# not using conda. Install a matching PyTorch/CUDA build separately first:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu118
+#
+# See config/README.md for which stage needs which packages, and
+# requirements-scimilarity.txt for the separate Scimilarity environment.
+
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+scanpy>=1.11
+anndata
+scvi-tools>=1.3
+cnmf
+scSpectra
+# IDS (InterDependence Score): not on PyPI, install from source:
+#   pip install --no-deps git+https://github.com/aradha/interdependence_scores.git
