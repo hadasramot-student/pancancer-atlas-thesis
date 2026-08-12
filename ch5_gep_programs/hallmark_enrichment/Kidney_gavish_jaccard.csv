@@ -1,0 +1,21 @@
+cancer,program,best_gavish_mp,jaccard,matched_0.05,matched_0.1,conserved_category
+Kidney,cNMF_1,Unmatched,0.0416666666666666,False,False,cancer-type-specific
+Kidney,cNMF_2,MP38 Glutathione,0.075268817204301,True,False,cancer-type-specific
+Kidney,cNMF_3,MP18 Interferon/MHC-II (II),0.0989010989010989,True,False,MHC-II/IFN-gamma
+Kidney,cNMF_4,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Kidney,cNMF_5,MP38 Glutathione,0.0869565217391304,True,False,cancer-type-specific
+Kidney,cNMF_6,MP5 Stress,0.4705882352941176,True,True,cancer-type-specific
+Kidney,cNMF_7,MP19 Epithelial Senescence,0.1627906976744186,True,True,cancer-type-specific
+Kidney,cNMF_8,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Kidney,cNMF_9,Unmatched,0.0416666666666666,False,False,cancer-type-specific
+Kidney,cNMF_10,MP39 Metal-response,0.0638297872340425,True,False,cancer-type-specific
+Kidney,cNMF_11,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Kidney,cNMF_12,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Kidney,cNMF_13,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Kidney,cNMF_14,MP19 Epithelial Senescence,0.0869565217391304,True,False,cancer-type-specific
+Kidney,cNMF_15,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Kidney,cNMF_16,MP36 IG,0.2195121951219512,True,True,cancer-type-specific
+Kidney,cNMF_17,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Kidney,cNMF_18,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Kidney,cNMF_19,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Kidney,cNMF_20,Unmatched,0.0101010101010101,False,False,cancer-type-specific

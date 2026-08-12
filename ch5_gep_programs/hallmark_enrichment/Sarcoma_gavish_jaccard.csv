@@ -1,0 +1,21 @@
+cancer,program,best_gavish_mp,jaccard,matched_0.05,matched_0.1,conserved_category
+Sarcoma,cNMF_1,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Sarcoma,cNMF_2,Unmatched,0.0416666666666666,False,False,cancer-type-specific
+Sarcoma,cNMF_3,Unmatched,0.0416666666666666,False,False,cancer-type-specific
+Sarcoma,cNMF_4,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Sarcoma,cNMF_5,MP1  Cell Cycle - G2/M,0.4084507042253521,True,True,cancer-type-specific
+Sarcoma,cNMF_6,Unmatched,0.0,False,False,cancer-type-specific
+Sarcoma,cNMF_7,MP17 Interferon/MHC-II (I),0.0638297872340425,True,False,MHC-II/IFN-gamma
+Sarcoma,cNMF_8,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Sarcoma,cNMF_9,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Sarcoma,cNMF_10,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Sarcoma,cNMF_11,Unmatched,0.0,False,False,cancer-type-specific
+Sarcoma,cNMF_12,Unmatched,0.0,False,False,cancer-type-specific
+Sarcoma,cNMF_13,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Sarcoma,cNMF_14,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Sarcoma,cNMF_15,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Sarcoma,cNMF_16,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Sarcoma,cNMF_17,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Sarcoma,cNMF_18,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Sarcoma,cNMF_19,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Sarcoma,cNMF_20,Unmatched,0.0101010101010101,False,False,cancer-type-specific

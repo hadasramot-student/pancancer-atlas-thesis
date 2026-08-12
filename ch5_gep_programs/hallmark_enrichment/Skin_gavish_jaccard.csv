@@ -1,0 +1,21 @@
+cancer,program,best_gavish_mp,jaccard,matched_0.05,matched_0.1,conserved_category
+Skin,cNMF_1,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Skin,cNMF_2,MP17 Interferon/MHC-II (I),0.1494252873563218,True,True,MHC-II/IFN-gamma
+Skin,cNMF_3,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Skin,cNMF_4,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Skin,cNMF_5,MP12 EMT-I,0.0526315789473684,True,False,EMT
+Skin,cNMF_6,MP19 Epithelial Senescence,0.0989010989010989,True,False,cancer-type-specific
+Skin,cNMF_7,MP23 Secreted II,0.0638297872340425,True,False,cancer-type-specific
+Skin,cNMF_8,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Skin,cNMF_9,MP32 Skin-pigmentation,0.075268817204301,True,False,cancer-type-specific
+Skin,cNMF_10,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Skin,cNMF_11,Unmatched,0.0,False,False,cancer-type-specific
+Skin,cNMF_12,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Skin,cNMF_13,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Skin,cNMF_14,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Skin,cNMF_15,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Skin,cNMF_16,Unmatched,0.0,False,False,cancer-type-specific
+Skin,cNMF_17,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Skin,cNMF_18,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Skin,cNMF_19,Unmatched,0.0,False,False,cancer-type-specific
+Skin,cNMF_20,Unmatched,0.0101010101010101,False,False,cancer-type-specific

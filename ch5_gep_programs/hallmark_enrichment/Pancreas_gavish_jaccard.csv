@@ -1,0 +1,21 @@
+cancer,program,best_gavish_mp,jaccard,matched_0.05,matched_0.1,conserved_category
+Pancreas,cNMF_1,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Pancreas,cNMF_2,MP40 PDAC-related,0.0526315789473684,True,False,cancer-type-specific
+Pancreas,cNMF_3,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Pancreas,cNMF_4,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Pancreas,cNMF_5,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Pancreas,cNMF_6,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Pancreas,cNMF_7,MP14 EMT-III,0.1627906976744186,True,True,EMT
+Pancreas,cNMF_8,MP3  Cell Cylce HMG-rich,0.0638297872340425,True,False,cancer-type-specific
+Pancreas,cNMF_9,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Pancreas,cNMF_10,MP3  Cell Cylce HMG-rich,0.075268817204301,True,False,cancer-type-specific
+Pancreas,cNMF_11,MP18 Interferon/MHC-II (II),0.1111111111111111,True,True,MHC-II/IFN-gamma
+Pancreas,cNMF_12,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Pancreas,cNMF_13,MP30 PDAC-classical,0.0526315789473684,True,False,cancer-type-specific
+Pancreas,cNMF_14,MP12 EMT-I,0.2195121951219512,True,True,EMT
+Pancreas,cNMF_15,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Pancreas,cNMF_16,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Pancreas,cNMF_17,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Pancreas,cNMF_18,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Pancreas,cNMF_19,Unmatched,0.0416666666666666,False,False,cancer-type-specific
+Pancreas,cNMF_20,MP19 Epithelial Senescence,0.1235955056179775,True,True,cancer-type-specific

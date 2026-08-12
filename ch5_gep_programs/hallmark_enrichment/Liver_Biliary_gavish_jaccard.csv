@@ -1,0 +1,21 @@
+cancer,program,best_gavish_mp,jaccard,matched_0.05,matched_0.1,conserved_category
+Liver_Biliary,cNMF_1,MP30 PDAC-classical,0.1764705882352941,True,True,cancer-type-specific
+Liver_Biliary,cNMF_2,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Liver_Biliary,cNMF_3,MP5 Stress,0.0869565217391304,True,False,cancer-type-specific
+Liver_Biliary,cNMF_4,MP41 Unassigned,0.0526315789473684,True,False,cancer-type-specific
+Liver_Biliary,cNMF_5,MP18 Interferon/MHC-II (II),0.0638297872340425,True,False,MHC-II/IFN-gamma
+Liver_Biliary,cNMF_6,MP39 Metal-response,0.0526315789473684,True,False,cancer-type-specific
+Liver_Biliary,cNMF_7,MP17 Interferon/MHC-II (I),0.075268817204301,True,False,MHC-II/IFN-gamma
+Liver_Biliary,cNMF_8,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Liver_Biliary,cNMF_9,MP40 PDAC-related,0.1111111111111111,True,True,cancer-type-specific
+Liver_Biliary,cNMF_10,MP5 Stress,0.1111111111111111,True,True,cancer-type-specific
+Liver_Biliary,cNMF_11,MP6 Hypoxia,0.1363636363636363,True,True,hypoxia
+Liver_Biliary,cNMF_12,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Liver_Biliary,cNMF_13,MP36 IG,0.1494252873563218,True,True,cancer-type-specific
+Liver_Biliary,cNMF_14,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Liver_Biliary,cNMF_15,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Liver_Biliary,cNMF_16,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Liver_Biliary,cNMF_17,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Liver_Biliary,cNMF_18,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Liver_Biliary,cNMF_19,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Liver_Biliary,cNMF_20,Unmatched,0.0204081632653061,False,False,cancer-type-specific

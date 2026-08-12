@@ -1,0 +1,21 @@
+cancer,program,best_gavish_mp,jaccard,matched_0.05,matched_0.1,conserved_category
+Brain,cNMF_1,Unmatched,0.0416666666666666,False,False,cancer-type-specific
+Brain,cNMF_2,MP5 Stress,0.0638297872340425,True,False,cancer-type-specific
+Brain,cNMF_3,MP25 Astrocytes,0.0526315789473684,True,False,cancer-type-specific
+Brain,cNMF_4,MP15 EMT IV,0.0526315789473684,True,False,EMT
+Brain,cNMF_5,MP12 EMT-I,0.1494252873563218,True,True,EMT
+Brain,cNMF_6,MP5 Stress,0.1904761904761904,True,True,cancer-type-specific
+Brain,cNMF_7,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Brain,cNMF_8,MP1  Cell Cycle - G2/M,0.6666666666666666,True,True,cancer-type-specific
+Brain,cNMF_9,MP6 Hypoxia,0.2195121951219512,True,True,hypoxia
+Brain,cNMF_10,MP17 Interferon/MHC-II (I),0.0869565217391304,True,False,MHC-II/IFN-gamma
+Brain,cNMF_11,MP15 EMT IV,0.0869565217391304,True,False,EMT
+Brain,cNMF_12,MP22 Secreted I,0.0526315789473684,True,False,cancer-type-specific
+Brain,cNMF_13,MP28 Oligo normal,0.2195121951219512,True,True,cancer-type-specific
+Brain,cNMF_14,MP28 Oligo normal,0.075268817204301,True,False,cancer-type-specific
+Brain,cNMF_15,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Brain,cNMF_16,Unmatched,0.0,False,False,cancer-type-specific
+Brain,cNMF_17,Unmatched,0.0,False,False,cancer-type-specific
+Brain,cNMF_18,Unmatched,0.0416666666666666,False,False,cancer-type-specific
+Brain,cNMF_19,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Brain,cNMF_20,MP36 IG,0.2048192771084337,True,True,cancer-type-specific

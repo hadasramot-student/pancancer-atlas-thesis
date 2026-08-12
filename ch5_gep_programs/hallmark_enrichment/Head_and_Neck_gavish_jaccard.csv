@@ -1,0 +1,21 @@
+cancer,program,best_gavish_mp,jaccard,matched_0.05,matched_0.1,conserved_category
+Head_and_Neck,cNMF_1,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Head_and_Neck,cNMF_2,MP5 Stress,0.1363636363636363,True,True,cancer-type-specific
+Head_and_Neck,cNMF_3,MP20 MYC,0.0526315789473684,True,False,cancer-type-specific
+Head_and_Neck,cNMF_4,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Head_and_Neck,cNMF_5,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Head_and_Neck,cNMF_6,MP1  Cell Cycle - G2/M,0.639344262295082,True,True,cancer-type-specific
+Head_and_Neck,cNMF_7,MP17 Interferon/MHC-II (I),0.075268817204301,True,False,MHC-II/IFN-gamma
+Head_and_Neck,cNMF_8,MP17 Interferon/MHC-II (I),0.0989010989010989,True,False,MHC-II/IFN-gamma
+Head_and_Neck,cNMF_9,MP23 Secreted II,0.2345679012345679,True,True,cancer-type-specific
+Head_and_Neck,cNMF_10,MP6 Hypoxia,0.3333333333333333,True,True,hypoxia
+Head_and_Neck,cNMF_11,MP19 Epithelial Senescence,0.0638297872340425,True,False,cancer-type-specific
+Head_and_Neck,cNMF_12,MP40 PDAC-related,0.0638297872340425,True,False,cancer-type-specific
+Head_and_Neck,cNMF_13,MP24 Cilia,0.1235955056179775,True,True,cancer-type-specific
+Head_and_Neck,cNMF_14,MP19 Epithelial Senescence,0.075268817204301,True,False,cancer-type-specific
+Head_and_Neck,cNMF_15,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Head_and_Neck,cNMF_16,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Head_and_Neck,cNMF_17,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Head_and_Neck,cNMF_18,MP19 Epithelial Senescence,0.0989010989010989,True,False,cancer-type-specific
+Head_and_Neck,cNMF_19,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Head_and_Neck,cNMF_20,Unmatched,0.0101010101010101,False,False,cancer-type-specific

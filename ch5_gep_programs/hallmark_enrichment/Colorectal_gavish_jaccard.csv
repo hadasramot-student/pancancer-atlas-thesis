@@ -1,0 +1,21 @@
+cancer,program,best_gavish_mp,jaccard,matched_0.05,matched_0.1,conserved_category
+Colorectal,cNMF_1,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Colorectal,cNMF_2,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Colorectal,cNMF_3,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Colorectal,cNMF_4,MP14 EMT-III,0.1235955056179775,True,True,EMT
+Colorectal,cNMF_5,MP30 PDAC-classical,0.0989010989010989,True,False,cancer-type-specific
+Colorectal,cNMF_6,MP23 Secreted II,0.1494252873563218,True,True,cancer-type-specific
+Colorectal,cNMF_7,MP30 PDAC-classical,0.0638297872340425,True,False,cancer-type-specific
+Colorectal,cNMF_8,MP30 PDAC-classical,0.0638297872340425,True,False,cancer-type-specific
+Colorectal,cNMF_9,MP36 IG,0.282051282051282,True,True,cancer-type-specific
+Colorectal,cNMF_10,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Colorectal,cNMF_11,MP19 Epithelial Senescence,0.1627906976744186,True,True,cancer-type-specific
+Colorectal,cNMF_12,Unmatched,0.0416666666666666,False,False,cancer-type-specific
+Colorectal,cNMF_13,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Colorectal,cNMF_14,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Colorectal,cNMF_15,MP33 RBCs,0.1111111111111111,True,True,cancer-type-specific
+Colorectal,cNMF_16,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Colorectal,cNMF_17,MP31 Alveolar,0.2987012987012987,True,True,cancer-type-specific
+Colorectal,cNMF_18,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Colorectal,cNMF_19,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Colorectal,cNMF_20,Unmatched,0.0309278350515463,False,False,cancer-type-specific

@@ -1,0 +1,21 @@
+cancer,program,best_gavish_mp,jaccard,matched_0.05,matched_0.1,conserved_category
+Lung,cNMF_1,MP31 Alveolar,0.1363636363636363,True,True,cancer-type-specific
+Lung,cNMF_2,MP6 Hypoxia,0.0638297872340425,True,False,hypoxia
+Lung,cNMF_3,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Lung,cNMF_4,MP3  Cell Cylce HMG-rich,0.075268817204301,True,False,cancer-type-specific
+Lung,cNMF_5,Unmatched,0.0416666666666666,False,False,cancer-type-specific
+Lung,cNMF_6,MP31 Alveolar,0.0638297872340425,True,False,cancer-type-specific
+Lung,cNMF_7,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Lung,cNMF_8,MP22 Secreted I,0.075268817204301,True,False,cancer-type-specific
+Lung,cNMF_9,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Lung,cNMF_10,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Lung,cNMF_11,Unmatched,0.0416666666666666,False,False,cancer-type-specific
+Lung,cNMF_12,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Lung,cNMF_13,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Lung,cNMF_14,MP14 EMT-III,0.0869565217391304,True,False,EMT
+Lung,cNMF_15,MP24 Cilia,0.2195121951219512,True,True,cancer-type-specific
+Lung,cNMF_16,MP19 Epithelial Senescence,0.1111111111111111,True,True,cancer-type-specific
+Lung,cNMF_17,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Lung,cNMF_18,MP30 PDAC-classical,0.1494252873563218,True,True,cancer-type-specific
+Lung,cNMF_19,MP30 PDAC-classical,0.0638297872340425,True,False,cancer-type-specific
+Lung,cNMF_20,Unmatched,0.0101010101010101,False,False,cancer-type-specific

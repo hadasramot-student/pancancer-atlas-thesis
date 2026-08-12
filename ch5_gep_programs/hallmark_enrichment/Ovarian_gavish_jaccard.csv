@@ -1,0 +1,21 @@
+cancer,program,best_gavish_mp,jaccard,matched_0.05,matched_0.1,conserved_category
+Ovarian,cNMF_1,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Ovarian,cNMF_2,Unmatched,0.0416666666666666,False,False,cancer-type-specific
+Ovarian,cNMF_3,MP12 EMT-I,0.0638297872340425,True,False,EMT
+Ovarian,cNMF_4,MP17 Interferon/MHC-II (I),0.1111111111111111,True,True,MHC-II/IFN-gamma
+Ovarian,cNMF_5,MP19 Epithelial Senescence,0.1235955056179775,True,True,cancer-type-specific
+Ovarian,cNMF_6,Unmatched,0.0416666666666666,False,False,cancer-type-specific
+Ovarian,cNMF_7,MP22 Secreted I,0.1111111111111111,True,True,cancer-type-specific
+Ovarian,cNMF_8,MP9 Unfolded protein response,0.0638297872340425,True,False,cancer-type-specific
+Ovarian,cNMF_9,MP41 Unassigned,0.0526315789473684,True,False,cancer-type-specific
+Ovarian,cNMF_10,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Ovarian,cNMF_11,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Ovarian,cNMF_12,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Ovarian,cNMF_13,MP24 Cilia,0.1627906976744186,True,True,cancer-type-specific
+Ovarian,cNMF_14,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Ovarian,cNMF_15,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Ovarian,cNMF_16,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Ovarian,cNMF_17,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Ovarian,cNMF_18,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Ovarian,cNMF_19,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Ovarian,cNMF_20,Unmatched,0.0204081632653061,False,False,cancer-type-specific

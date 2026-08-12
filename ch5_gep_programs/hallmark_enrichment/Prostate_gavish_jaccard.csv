@@ -1,0 +1,21 @@
+cancer,program,best_gavish_mp,jaccard,matched_0.05,matched_0.1,conserved_category
+Prostate,cNMF_1,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Prostate,cNMF_2,MP3  Cell Cylce HMG-rich,0.0989010989010989,True,False,cancer-type-specific
+Prostate,cNMF_3,MP12 EMT-I,0.1111111111111111,True,True,EMT
+Prostate,cNMF_4,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Prostate,cNMF_5,MP5 Stress,0.25,True,True,cancer-type-specific
+Prostate,cNMF_6,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Prostate,cNMF_7,MP22 Secreted I,0.0526315789473684,True,False,cancer-type-specific
+Prostate,cNMF_8,MP17 Interferon/MHC-II (I),0.1111111111111111,True,True,MHC-II/IFN-gamma
+Prostate,cNMF_9,MP12 EMT-I,0.0638297872340425,True,False,EMT
+Prostate,cNMF_10,MP10 Protein maturation,0.0638297872340425,True,False,cancer-type-specific
+Prostate,cNMF_11,MP12 EMT-I,0.1904761904761904,True,True,EMT
+Prostate,cNMF_12,MP12 EMT-I,0.0526315789473684,True,False,EMT
+Prostate,cNMF_13,Unmatched,0.0309278350515463,False,False,cancer-type-specific
+Prostate,cNMF_14,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Prostate,cNMF_15,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Prostate,cNMF_16,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Prostate,cNMF_17,Unmatched,0.0204081632653061,False,False,cancer-type-specific
+Prostate,cNMF_18,Unmatched,0.0101010101010101,False,False,cancer-type-specific
+Prostate,cNMF_19,Unmatched,0.0416666666666666,False,False,cancer-type-specific
+Prostate,cNMF_20,Unmatched,0.0204081632653061,False,False,cancer-type-specific

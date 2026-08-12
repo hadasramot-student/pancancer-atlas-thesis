@@ -4,8 +4,11 @@ Analysis code for a pan-cancer single-cell RNA-seq atlas spanning 13 cancer
 types: aggregation & QC, multi-method cell-type annotation with consensus
 voting, batch correction & evaluation, lineage subclustering, and NMF-based
 transcriptional program (GEP) discovery. This code accompanies the MSc
-thesis *[thesis title]* — see **Code Availability** in the thesis for the
-link back to this repository.
+thesis *Pan-Cancer Single-cell Atlas of Tumors and their Microenvironment:
+Harmonization, Cell-Type Curation, and Transcriptional Programs
+Characterization* (Hadas Ramot, Ben-Gurion University of the Negev, 2026) —
+see **Appendix C (Code Availability)** in the thesis for the link back to
+this repository.
 
 Mixed R (Seurat, SingleR, SCType, ComBat/sva, batchelor/MNN, harmony,
 GeneNMF, fgsea, msigdbr) and Python (scANVI/scvi-tools, Scimilarity, cNMF,
@@ -27,7 +30,12 @@ Breastscape ┘   + schema       Scimilarity                  Harmony           
                                 Consensus_Cell_Type                                               │                   Hallmark priors /
                                                                                              Scimilarity cluster            IDS / Jaccard
                                                                                              annotation + markers      cross-method comparison
-                                                                                             + Hallmark (fgsea)
+                                                                                             + Hallmark (fgsea)              │
+                                                                                                                        Hallmark GSEA + Gavish/
+                                                                                                                        Tirosh meta-program match
+                                                                                                                             │
+                                                                                                                        TCGA survival
+                                                                                                                        (BRCA/KIRC outcome)
 ```
 
 Each stage's scripts live in the correspondingly-named directory below.
@@ -50,10 +58,13 @@ ch4_subclustering/     Lineage splitting, per-lineage PCA/UMAP/clustering
                        marker identification, Hallmark enrichment
 ch5_gep_programs/       Tumor cell selection, cNMF, GeneNMF (epithelial +
     cnmf/                immune), Spectra (+ TME priors, GPU), IDS,
-    genenmf/              cross-method comparison (Jaccard + IDS)
-    genenmf_immune/
-    ids_analysis/
+    genenmf/              cross-method comparison (Jaccard + IDS), Hallmark
+    genenmf_immune/        GSEA + Gavish/Tirosh meta-program comparison,
+    ids_analysis/          TCGA survival outcome linkage
     spectra/
+    hallmark_enrichment/  Hallmark GSEA validation + Gavish et al. (2023)
+                           meta-program Jaccard comparison for cNMF programs
+    tcga_survival/         TCGA-BRCA/KIRC survival vs. GEP program scores
 common/                 Shared R helper library (functions.R)
 config/                 Shared parameters (QC thresholds, cancer types,
                         lineages, K values, resolutions) — see config/README.md
@@ -89,4 +100,8 @@ configs, small reference tables, and documentation are tracked.
 
 ## Link to thesis
 
-[thesis title / link / DOI — fill in before publishing]
+*Pan-Cancer Single-cell Atlas of Tumors and their Microenvironment:
+Harmonization, Cell-Type Curation, and Transcriptional Programs
+Characterization* — Hadas Ramot, MSc thesis, Ben-Gurion University of the
+Negev, 2026. [Link/DOI to be added once the thesis is available in the
+institutional repository.]
