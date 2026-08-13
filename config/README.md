@@ -13,6 +13,14 @@
 - **`lab_utils/`** (not included — see below) — lab-internal R generic
   utilities (`Utils.R`, `Utils.MS.R`) sourced by `common/functions.R` and
   `ch1_aggregation_qc/02_ingest_3ca.R`.
+- **`lookup_table_full.tsv`** (not included — see below) — Ensembl gene ID
+  → HGNC symbol lookup table (BioMart export), used by
+  `ch2_annotation/04_object_annotation.R` and `05_consensus_annotation.R`
+  (`--lookup_table` flag, default `config/lookup_table_full.tsv`). Too
+  large (~1.4M rows) to track as a repo reference table; regenerate via
+  Ensembl BioMart (`ensembl_gene_id`, `description`,
+  `external_gene_name`, `hgnc_id`, `version` columns) or point
+  `--lookup_table` at your own copy.
 
 ## Environment variables
 

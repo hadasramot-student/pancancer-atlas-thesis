@@ -1,6 +1,7 @@
 # Data products — never commit raw/intermediate data, only scripts/configs/small tables
 data/
 temp_objects/
+config/lookup_table_full.tsv
 *.RDS
 *.rds
 *.h5ad
