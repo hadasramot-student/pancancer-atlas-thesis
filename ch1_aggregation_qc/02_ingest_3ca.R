@@ -110,8 +110,8 @@ log_skip <- function(reason) {
 has_cell_type <- "cell_type" %in% names(cells_org_annot)
 has_cell_name <- any(c("cell_name", "Cell_names") %in% names(cells_org_annot))
 
-if (!has_cell_type) return(log_skip("missing 'cell_type'"))
-if (!has_cell_name) return(log_skip("missing 'cell_name'/'Cell_names'"))
+if (!has_cell_type) { log_skip("missing 'cell_type'"); quit(save = "no", status = 0) }
+if (!has_cell_name) { log_skip("missing 'cell_name'/'Cell_names'"); quit(save = "no", status = 0) }
 
 seurat_object@meta.data$cancer_type <- cancer_type
 cells_org_annot <- cells_org_annot[cells_org_annot$cell_name %in% rownames(seurat_object@meta.data), ]
