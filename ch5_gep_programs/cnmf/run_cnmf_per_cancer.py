@@ -35,7 +35,7 @@ H5AD_PATHS = {
     cancer: os.path.join(_MERGED_BASE, cancer, f"Epithelial_{cancer}_merged_full.h5ad")
     for cancer in [
         "Lung", "Colorectal", "Kidney", "Liver_Biliary", "Ovarian", "Pancreas",
-        "Prostate", "Sarcoma", "Skin", "Brain", "Breast",
+        "Prostate", "Sarcoma", "Skin", "Brain", "Breast", "Head_and_Neck",
     ]
 }
 
@@ -48,6 +48,15 @@ def load_counts(cancer, n_cells):
     print(f"Loading {cancer}: {path}")
     adata = ad.read_h5ad(path)
     print(f"  Loaded: {adata.shape[0]} cells x {adata.shape[1]} genes")
+
+    # Some source objects (e.g. Head_and_Neck, ScBaseCount-origin) carry a
+    # stray leftover '_index' obs column from an earlier h5ad round-trip.
+    # It duplicates the real index and is not part of the standardized
+    # schema; anndata refuses to write obs with a column literally named
+    # '_index', so drop it if present (no effect on any real data/genes).
+    if "_index" in adata.obs.columns:
+        print("  Dropping stray leftover '_index' obs column")
+        adata.obs = adata.obs.drop(columns=["_index"])
 
     mat = adata.layers["counts"] if "counts" in adata.layers else adata.X
 
