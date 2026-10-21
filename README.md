@@ -74,6 +74,7 @@ ch1_aggregation_qc/            (thesis Ch.2)
     project_count_audit/           project counts on the deduplicated atlas (198 projects)
     repository_inventory/          raw cell counts per repository and cancer type
     atlas_*.py                     atlas composition figures
+    thesis_figures/                Figures 2.1 and A.1 (cells per cancer type after / before QC)
     checks/                        one-off sanity checks kept for traceability
 ch2_annotation/                (thesis Ch.3)
     04_object_annotation.R         SingleR + SCType (+ 3CA original labels)
@@ -97,7 +98,8 @@ ch3_batch_correction/          (thesis Ch.4)
     epithelial_benchmark/          epithelial batch-correction benchmark
     benchmark_sensitivity/         duplicate-study overlap, dedup re-run, seed control
     atlas_200k_scanvi/             200,000-cell atlas scANVI embedding + UMAP figures
-    plot_*.R, umap_batch_comparison.R, thesis_figures/   figures
+    plot_*.R, umap_batch_comparison.R   figures
+    thesis_figures/                Figures 4.1, 4.2, 4.5 and the study-of-origin panel
     checks/
 ch4_subclustering/             (thesis Ch.5)
     merge_by_cell_type_from_all_cells.R  lineage split
@@ -128,7 +130,7 @@ ch5_gep_programs/              (thesis Ch.6)
     tcga_survival/                 TCGA-BRCA/KIRC survival (run_tcga_survival.R)
         kirc_mp11/                 KIRC MP11 overall survival on consolidated primary tumours
         purity_adjustment/         purity-adjusted Cox models (03_purity_survival_v2.R = final)
-    thesis_figures/                Figures 6.1, 6.4, 6.5, A.29, A.30, A.38
+    thesis_figures/                Figures 6.1, 6.3, 6.4, 6.5, A.29, A.30, A.38
     checks/
 common/functions.R             shared R helpers
 config/                        shared parameters (see config/README.md)
@@ -222,6 +224,7 @@ Each script's header documents its inputs, outputs and usage. In order:
 
 | Thesis item | Script |
 |---|---|
+| Figure 2.1 — cells per cancer type after QC; Figure A.1 — before QC | `ch1_aggregation_qc/thesis_figures/make_fig2_1_and_A1_cell_bars.py` (²) |
 | Figure 3.1 — consensus cell-type composition per cancer type | `ch2_annotation/thesis_figures/fig3_1_composition/make_ch2_fig1.py` |
 | Table 4 — inter-method agreement per meta-type | `ch2_annotation/table4_agreement.R` |
 | 3CA author-label validation (88.8% / 70.6%) | `ch2_annotation/validation_3ca_author_labels/` |
@@ -231,6 +234,8 @@ Each script's header documents its inputs, outputs and usage. In order:
 | Benchmark duplicate overlap / seed control | `ch3_batch_correction/benchmark_sensitivity/` |
 | Epithelial benchmark | `ch3_batch_correction/epithelial_benchmark/` |
 | Atlas-wide 200,000-cell scANVI UMAPs | `ch3_batch_correction/atlas_200k_scanvi/05_figures.py` |
+| Figures 4.1 and 4.2 — Uncorrected vs scANVI UMAP panels (from Figures A.15 / A.16) | `ch3_batch_correction/thesis_figures/make_fig4_1_4_2_two_panel_umaps.py` (²) |
+| Figure 4.5 — Uncorrected (PCA) vs scANVI, by source repository | `ch3_batch_correction/thesis_figures/make_fig4_5_pca_vs_scanvi.py` (²) |
 | Subclustering UMAPs (print redraws) | `ch4_subclustering/thesis_figures/umap_redraws/plot_umaps_print.R` |
 | Subclustering marker dot plots | `ch4_subclustering/fig19_tcells_liver_biliary_dotplot.R`, `fig23_epithelial_kidney_dotplot.R` |
 | Figure 6.1 — cNMF Hallmark enrichment (BH-corrected) | `ch5_gep_programs/thesis_figures/fig6_1_A29_A30_A38/01_hc_pairs_and_hallmark_bh.py` → `02_fig6_1_hallmark_dotplot.py` |
@@ -241,9 +246,18 @@ Each script's header documents its inputs, outputs and usage. In order:
 | Jaccard null threshold 0.0538 | `ch5_gep_programs/jaccard_threshold/null_derived_threshold.py` |
 | Choice of K = 20 | `ch5_gep_programs/cnmf/k_selection/`, `cnmf/plot_stability.py` |
 | Consensus meta-programs, Table B97 contamination audit | `ch5_gep_programs/meta_programs/` |
+| Figure 6.3 — median IDS heatmap | `ch5_gep_programs/thesis_figures/make_fig6_3_ids_heatmap.py` (²) |
 | Figure 6.4 — KIRC MP11 survival; Part 3 Cox models | `ch5_gep_programs/thesis_figures/fig6_4_fig6_5/ch5_fig4_and_part3.R` |
 | Figure 6.5 — Gavish et al. meta-program comparison | `ch5_gep_programs/thesis_figures/fig6_4_fig6_5/make_ch5_fig5_gavish_dotplot.py` / `make_ch5_fig5.py` |
 | KIRC MP11 purity-adjusted Cox | `ch5_gep_programs/tcga_survival/purity_adjustment/03_purity_survival_v2.R` |
+
+(²) Made outside the cluster during the thesis revision (October 2026; Python 3 +
+matplotlib + Pillow). These redraw figures from numbers or images that already
+existed and do no new analysis: Figures 2.1 / A.1 and 6.3 use values typed in
+from the original figure labels (Breast post-QC corrected to 59 projects after
+the project-count audit); Figures 4.1, 4.2 and 4.5 crop panels from the
+original images (Figures A.15 / A.16 and the 30 September Figure 4.5 image)
+and redraw titles and legends.
 
 ## External inputs (not included)
 
@@ -291,6 +305,16 @@ top of each script before running:
   `hallmark_enrichment/*`, `meta_programs/*`, `jaccard_threshold/*`, `ids_analysis/build_hc85_ids_summary.py`,
   `ids_analysis/jaccard_ids_stats.py`, `contamination_audits/*`, `tcga_survival/kirc_mp11/*`,
   `tcga_survival/purity_adjustment/*`, `thesis_figures/*`, `checks/*`
+
+The revision figure scripts marked (²) in the index above
+(`ch1_aggregation_qc/thesis_figures/make_fig2_1_and_A1_cell_bars.py`,
+`ch3_batch_correction/thesis_figures/make_fig4_1_4_2_two_panel_umaps.py`,
+`ch3_batch_correction/thesis_figures/make_fig4_5_pca_vs_scanvi.py`,
+`ch5_gep_programs/thesis_figures/make_fig6_3_ids_heatmap.py`) use **relative**
+input/output paths that point to the working copy used during the revision
+(e.g. `figs/`, `c5/`, `c8/`, `c13/`, `v123/content/images/`,
+`v117docx/word/media/image5.png`). Create those folders, or edit the paths,
+before running. The source images that the 4.x scripts crop are not included.
 
 This repository intentionally excludes data products (raw counts, `.RDS` /
 `.h5ad` objects, figures, model checkpoints, patient-level clinical data) —
