@@ -244,6 +244,7 @@ Each script's header documents its inputs, outputs and usage. In order:
 | Subclustering marker dot plots | `ch4_subclustering/fig19_tcells_liver_biliary_dotplot.R`, `fig23_epithelial_kidney_dotplot.R` |
 | Subclustering marker dot plots, print redraw (Figures A.23/26/29/32/35/38 `--mode log2fc`; A.51/52 `--mode dotplot`) | `ch4_subclustering/thesis_figures/plot_marker_dotplot.py` (dot-plot data: `extract_dotplot_data.R`, submitted by `ch3_batch_correction/thesis_figures/submit_extract.sh`); caption cluster counts: `count_clusters.R` |
 | Subclustering cluster counts per resolution (comment 9 check) | `ch4_subclustering/checks/comment9_cluster_counts.py` (reads the saved `<object>_cluster_summary.tsv` / `_scimilarity_summary.tsv`) |
+| Appendix B cluster tables B.2–B.92: regeneration from saved outputs and check against the thesis | `ch4_subclustering/checks/appendixB_tables/` (`submit_check_objects.sh` → `check_object.R` per object, `extract_thesis_tables.py`, `regenerate_and_compare.py regen <object>` / `summary`, `hallmark_ranking_check.py`, `res030_marker_source_check.py`) |
 | Figure 6.1 — cNMF Hallmark enrichment (BH-corrected) | `ch5_gep_programs/thesis_figures/fig6_1_A29_A30_A38/01_hc_pairs_and_hallmark_bh.py` → `02_fig6_1_hallmark_dotplot.py` |
 | Figure A.29 — cNMF usage heatmap | `.../fig6_1_A29_A30_A38/03_figA29_cnmf_usage_heatmap.py` |
 | Figure A.30 — GeneNMF sample coverage | `.../fig6_1_A29_A30_A38/04_figA30_genenmf_coverage_heatmap.py` |
