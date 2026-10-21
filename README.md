@@ -248,6 +248,8 @@ Each script's header documents its inputs, outputs and usage. In order:
 | Consensus meta-programs, Table B97 contamination audit | `ch5_gep_programs/meta_programs/` |
 | Figure 6.3 — median IDS heatmap | `ch5_gep_programs/thesis_figures/make_fig6_3_ids_heatmap.py` (²) |
 | Figure 6.4 — KIRC MP11 survival; Part 3 Cox models | `ch5_gep_programs/thesis_figures/fig6_4_fig6_5/ch5_fig4_and_part3.R` |
+| Figure 6.4 (v2) — same panel, Cox line as unadjusted HR per 1 SD of the MP11 score | `ch5_gep_programs/thesis_figures/ch5_fig4_v2.R` |
+| Marker-defined programs (hypoxia, MHC-II/IFNG, NF-kB/TNFA, EMT, G2M) vs cNMF programs and Hallmark sets | `ch5_gep_programs/thesis_figures/07_comment12_part4_marker_programs.py` (reads `hallmark_all_tests_bh.csv` from `fig6_1_A29_A30_A38/01_hc_pairs_and_hallmark_bh.py`) |
 | Figure 6.5 — Gavish et al. meta-program comparison | `ch5_gep_programs/thesis_figures/fig6_4_fig6_5/make_ch5_fig5_gavish_dotplot.py` / `make_ch5_fig5.py` |
 | KIRC MP11 purity-adjusted Cox | `ch5_gep_programs/tcga_survival/purity_adjustment/03_purity_survival_v2.R` |
 
