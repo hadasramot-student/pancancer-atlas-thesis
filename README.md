@@ -99,7 +99,8 @@ ch3_batch_correction/          (thesis Ch.4)
     benchmark_sensitivity/         duplicate-study overlap, dedup re-run, seed control
     atlas_200k_scanvi/             200,000-cell atlas scANVI embedding + UMAP figures
     plot_*.R, umap_batch_comparison.R   figures
-    thesis_figures/                Figures 4.1, 4.2, 4.5 and the study-of-origin panel
+    thesis_figures/                Figures 4.1, 4.2, 4.5, the study-of-origin panel and the
+                                   Appendix A batch-correction UMAP redraws (comment 18)
     checks/
 ch4_subclustering/             (thesis Ch.5)
     merge_by_cell_type_from_all_cells.R  lineage split
@@ -115,6 +116,7 @@ ch4_subclustering/             (thesis Ch.5)
     report_epithelial_brain.R      Epithelial_Brain report
     audits/                        Kidney c5/c9 ambient check, cell-count cross-check
     thesis_figures/umap_redraws/   print-size UMAP redraws
+    thesis_figures/                marker dot-plot redraws (comment 18)
     checks/
 ch5_gep_programs/              (thesis Ch.6)
     input_prep/, filter_brain_malignant.R   epithelial / tumour h5ad inputs (Breast chunks, Brain)
@@ -236,8 +238,11 @@ Each script's header documents its inputs, outputs and usage. In order:
 | Atlas-wide 200,000-cell scANVI UMAPs | `ch3_batch_correction/atlas_200k_scanvi/05_figures.py` |
 | Figures 4.1 and 4.2 — Uncorrected vs scANVI UMAP panels (from Figures A.15 / A.16) | `ch3_batch_correction/thesis_figures/make_fig4_1_4_2_two_panel_umaps.py` (²) |
 | Figure 4.5 — Uncorrected (PCA) vs scANVI, by source repository | `ch3_batch_correction/thesis_figures/make_fig4_5_pca_vs_scanvi.py` (²) |
+| Figures A.9–A.15, A.17, A.19, A.53, A.54, 4.1 and 4.2 (`ch3_fig1` / `ch3_fig2`) — batch-correction UMAPs, print redraw | `ch3_batch_correction/thesis_figures/submit_extract.sh` (→ `extract_batch_umap_data.R`) → `plot_batch_umaps.py` (`--kind overview / subtypes / ch3_fig1 / ch3_fig2`) |
+| Figures A.16, A.18, A.20 — batch-correction UMAPs by Scimilarity subtype | `ch3_batch_correction/thesis_figures/c18_subtypes.py` (from the `*_umapdata.csv.gz` of `extract_batch_umap_data.R`) |
 | Subclustering UMAPs (print redraws) | `ch4_subclustering/thesis_figures/umap_redraws/plot_umaps_print.R` |
 | Subclustering marker dot plots | `ch4_subclustering/fig19_tcells_liver_biliary_dotplot.R`, `fig23_epithelial_kidney_dotplot.R` |
+| Subclustering marker dot plots, print redraw (Figures A.23/26/29/32/35/38 `--mode log2fc`; A.51/52 `--mode dotplot`) | `ch4_subclustering/thesis_figures/plot_marker_dotplot.py` (dot-plot data: `extract_dotplot_data.R`, submitted by `ch3_batch_correction/thesis_figures/submit_extract.sh`); caption cluster counts: `count_clusters.R` |
 | Subclustering cluster counts per resolution (comment 9 check) | `ch4_subclustering/checks/comment9_cluster_counts.py` (reads the saved `<object>_cluster_summary.tsv` / `_scimilarity_summary.tsv`) |
 | Figure 6.1 — cNMF Hallmark enrichment (BH-corrected) | `ch5_gep_programs/thesis_figures/fig6_1_A29_A30_A38/01_hc_pairs_and_hallmark_bh.py` → `02_fig6_1_hallmark_dotplot.py` |
 | Figure A.29 — cNMF usage heatmap | `.../fig6_1_A29_A30_A38/03_figA29_cnmf_usage_heatmap.py` |
@@ -303,7 +308,7 @@ top of each script before running:
   `thesis_figures/*`, `checks/*`
 - `ch4_subclustering/`: `fig19_*`, `fig23_*`, `elbow_check.R`, `submit_*.sh`,
   `clustering_jobs/submit_clustering_per_cancertype.sh`, `epithelial_breast_subsample/*`,
-  `audits/*`, `thesis_figures/umap_redraws/submit_extract.sh`, `checks/*`
+  `audits/*`, `thesis_figures/*`, `checks/*`
 - `ch5_gep_programs/`: `input_prep/*`, `cnmf/submit_cnmf_all_cancers.sh`, `cnmf/k_selection/*`,
   `hallmark_enrichment/*`, `meta_programs/*`, `jaccard_threshold/*`, `ids_analysis/build_hc85_ids_summary.py`,
   `ids_analysis/jaccard_ids_stats.py`, `contamination_audits/*`, `tcga_survival/kirc_mp11/*`,
