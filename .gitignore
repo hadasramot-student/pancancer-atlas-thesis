@@ -11,9 +11,14 @@ config/lookup_table_full.tsv
 *.loom
 *.pickle
 *.pkl
+*.h5
+*.npz
+*.sif
 
 # Large / generated tables and figures (regenerate via the scripts)
 outputs/
+*.png
+*.pdf
 *.log
 logs/
 *.out
