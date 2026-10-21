@@ -238,6 +238,7 @@ Each script's header documents its inputs, outputs and usage. In order:
 | Figure 4.5 — Uncorrected (PCA) vs scANVI, by source repository | `ch3_batch_correction/thesis_figures/make_fig4_5_pca_vs_scanvi.py` (²) |
 | Subclustering UMAPs (print redraws) | `ch4_subclustering/thesis_figures/umap_redraws/plot_umaps_print.R` |
 | Subclustering marker dot plots | `ch4_subclustering/fig19_tcells_liver_biliary_dotplot.R`, `fig23_epithelial_kidney_dotplot.R` |
+| Subclustering cluster counts per resolution (comment 9 check) | `ch4_subclustering/checks/comment9_cluster_counts.py` (reads the saved `<object>_cluster_summary.tsv` / `_scimilarity_summary.tsv`) |
 | Figure 6.1 — cNMF Hallmark enrichment (BH-corrected) | `ch5_gep_programs/thesis_figures/fig6_1_A29_A30_A38/01_hc_pairs_and_hallmark_bh.py` → `02_fig6_1_hallmark_dotplot.py` |
 | Figure A.29 — cNMF usage heatmap | `.../fig6_1_A29_A30_A38/03_figA29_cnmf_usage_heatmap.py` |
 | Figure A.30 — GeneNMF sample coverage | `.../fig6_1_A29_A30_A38/04_figA30_genenmf_coverage_heatmap.py` |
