@@ -65,8 +65,7 @@ obj <- tryCatch({
   obj  # return unchanged if it fails
 })
 
-log_msg(sprintf("Layers after join attempt: %s",
-                paste(Layers(obj[["RNA"]]), collapse = ", ")))
+log_msg("RNA layers ready for conversion")
 
 # --------------------------------------------------
 # Extract counts and log-normalised data
@@ -76,6 +75,16 @@ counts_mat <- GetAssayData(obj, assay = "RNA", layer = "counts")
 
 log_msg("Extracting log-normalised data (RNA, layer = 'data')")
 data_mat <- GetAssayData(obj, assay = "RNA", layer = "data")
+
+# Defensive: for single-project objects, the RNA layer can still be named
+# "counts.<project>" after JoinLayers (nothing to join with only one layer),
+# and Seurat's internal layer resolver can return a matrix whose rownames
+# don't survive that path -- always re-stamp gene names from the object's
+# own authoritative Features(), not whatever the fetched matrix happened to
+# carry, so var_names can never silently end up as a numeric placeholder.
+stopifnot(nrow(counts_mat) == length(Features(obj)))
+rownames(counts_mat) <- Features(obj)
+rownames(data_mat)   <- Features(obj)
 
 # AnnData expects cells x genes (Seurat is genes x cells)
 counts_mat <- t(counts_mat)
@@ -98,14 +107,18 @@ if ("paper" %in% colnames(meta)) {
   meta$paper <- NULL
 }
 
-# Replace all-NA columns with simple character
+# Drop all-NA columns outright (carry zero information, and casting
+# them to character has been observed to intermittently fail during
+# the reticulate/anndata write step -- e.g. TypeError: "Can't
+# implicitly convert non-string objects to strings" on an all-None
+# object column -- so remove the ambiguity instead of working around it)
 all_na_cols <- vapply(meta, function(x) all(is.na(x)), logical(1))
 if (any(all_na_cols)) {
   log_msg(paste(
-    "Columns that are all NA, casting to character:",
+    "Dropping all-NA columns (empty / would risk a flaky anndata write):",
     paste(names(which(all_na_cols)), collapse = ", ")
   ))
-  meta[all_na_cols] <- lapply(meta[all_na_cols], function(x) as.character(x))
+  meta <- meta[, !all_na_cols, drop = FALSE]
 }
 
 # Force each column to be numeric, logical, or character
@@ -148,15 +161,19 @@ var_df <- data.frame(
   row.names = gene_names
 )
 
+# Create AnnData with log-normalized data in X and raw counts as a layer
+# counts layer is required for seurat_v3 HVG selection in scVI/scANVI
 ad <- AnnData(
-  X      = data_mat,                   # log-normalised expression
-  obs    = meta,                       # cell metadata
-  var    = var_df,                     # gene metadata (minimal)
-  layers = list(counts = counts_mat)   # raw counts
+  X      = data_mat,                  # log-normalised expression
+  obs    = meta,                      # cell metadata
+  var    = var_df,                    # gene metadata (minimal)
+  layers = list(counts = counts_mat)  # raw counts for HVG selection
 )
 
 ad$obs_names <- cell_names
 ad$var_names <- gene_names
+
+log_msg("AnnData object ready (X = log-normalized data, layers['counts'] = raw counts)")
 
 # --------------------------------------------------
 # Write h5ad
